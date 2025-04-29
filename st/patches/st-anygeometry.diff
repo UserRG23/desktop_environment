@@ -1,0 +1,44 @@
+From 6a5a862569912e34febe2dbd5244062013840204 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jos=C3=A9=20Miguel=20S=C3=A1nchez=20Garc=C3=ADa?=
+ <soy.jmi2k@gmail.com>
+Date: Thu, 13 Aug 2020 11:02:01 +0000
+Subject: [PATCH] add -G to set pixel-based geometry
+
+---
+ config.h | 13 +++++++++++++
+ 1 files changed, 13 insertions(+), 0 deletions(-)
+
+diff --git a/config.h b/config.def.h
+index 6f05dce..bea316a 100644
+--- a/config.h
++++ b/config.h
+@@ -141,6 +141,12 @@ static unsigned int defaultrcs = 257;
+  */
+ static unsigned int cursorshape = 2;
+ 
++/*
++ * Whether to use pixel geometry or cell geometry
++ */
++
++static Geometry geometry = CellGeometry;
++
+ /*
+  * Default columns and rows numbers
+  */
+@@ -148,6 +154,13 @@ static unsigned int cursorshape = 2;
+ static unsigned int cols = 80;
+ static unsigned int rows = 24;
+ 
++/*
++ * Default width and height (including borders!)
++ */
++
++static unsigned int width = 564;
++static unsigned int height = 364;
++
+ /*
+  * Default colour and shape of the mouse cursor
+  */
+ 
+2.28.0
+

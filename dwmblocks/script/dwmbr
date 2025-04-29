@@ -1,0 +1,5 @@
+#!/bin/bash
+
+br=$( brightnessctl | grep 'Current brightness' | cut -d' ' -f4 | tr -d '()')
+icon="  "
+printf " %s %s\\n" "$icon""$br"

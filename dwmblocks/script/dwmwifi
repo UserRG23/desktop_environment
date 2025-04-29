@@ -1,0 +1,7 @@
+#!/bin/bash
+wifiname="$( nmcli -t connection show --active 2>/dev/null | grep wireless | cut -d':' -f1)"
+if [ $wifiname -Z ]; then
+	echo -ne "    None"
+else
+	echo -ne "    $wifiname"
+fi

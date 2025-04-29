@@ -1,0 +1,13 @@
+#!/bin/bash
+mix="$(amixer get Master | tail -1)"
+vol="$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')"
+icon="  "
+
+if [[ $mix == *\[off\]* ]]; then
+      printf "%s %s \\n" "$icon""OFF" 
+
+elif [[ $mix == *\[on\]* ]]; then
+	printf "%s %s \\n" "$icon""$vol%" 
+else
+printf " %s %s\\n" "$icon""---" 
+fi

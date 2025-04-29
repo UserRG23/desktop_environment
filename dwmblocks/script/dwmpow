@@ -1,0 +1,21 @@
+#!/bin/bash
+battery="$(cat /sys/class/power_supply/BAT*/capacity)" 
+  
+if [ $battery -gt 80 ]
+then
+	icon=""
+elif [ $battery -gt 60 ] && [ $battery -lt 81 ]
+then
+	icon=""
+elif [ $battery -gt 40 ] && [ $battery -lt 61 ]
+then
+	icon=""
+elif [ $battery -gt 20 ] && [ $battery -lt 41 ]
+then
+	icon=""
+elif [ $battery -gt 0 ] && [ $battery -lt 21 ]
+then
+	icon=""
+fi
+echo -ne " ${icon} ${battery}%"
+  

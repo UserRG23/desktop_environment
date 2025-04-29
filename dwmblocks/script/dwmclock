@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+tm="$(date +"%H:%M"| sed 's/  / /g')"
+icon=""
+printf " %s  %s\\n" " $icon ""$tm"
+
+
