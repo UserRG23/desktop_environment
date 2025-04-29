@@ -1,8 +1,0 @@
-#!/bin/bash
-
-br=$(brightnessctl | grep 'Current brightness' | cut -d' ' -f3)
-if [ $br -lt 14 ]; then 
-    brightnessctl set 1%
-else 
-    brightnessctl set 5%-
-fi
