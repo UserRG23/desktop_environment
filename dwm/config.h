@@ -9,7 +9,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMonoNL NFP:size=15:style=bold",
 "Font Awesome 6 Free Solid:size=8"};
-static const char dmenufont[]       = "JetBrainsMonoNL NFP:size=10:style=Bold" ;
+static const char dmenufont[]       = "JetBrainsMonoNL NFP:size=15:style=Bold" ;
 static const char col_gray1[]       = "#282828";        /* цвет col_gray1 */
 static const char col_gray2[]       = "#d4be98";        /* цвет col_gray2 */
 static const char col_gray3[]       = "#d4be98";        /* цвет col_gray3 */

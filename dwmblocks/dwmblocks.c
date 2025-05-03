@@ -34,7 +34,7 @@ void setupsignals();
 void sighandler(int signum);
 int getstatus(char *str, char *last);
 void statusloop();
-void termhandler();
+void termhandler(int statusContinue);
 void pstdout();
 #ifndef NO_X
 void setroot();
@@ -184,7 +184,7 @@ void sighandler(int signum)
 	writestatus();
 }
 
-void termhandler()
+void termhandler(int statusContinue)
 {
 	statusContinue = 0;
 }
@@ -209,5 +209,5 @@ int main(int argc, char** argv)
 #ifndef NO_X
 	XCloseDisplay(dpy);
 #endif
-	return 0;
+	return returnStatus;
 }
