@@ -109,14 +109,17 @@ static const Key keys[] = {
 	{ 0, 			            	XF86XK_AudioRaiseVolume,   spawn,   SHCMD("pkill -RTMIN+1 dwmblocks") }, 
 	{ 0, 				            XF86XK_AudioLowerVolume,   spawn,   SHCMD("pkill -RTMIN+1 dwmblocks") }, 
 	{ 0, 				            XF86XK_AudioMute,          spawn,   SHCMD("pkill -RTMIN+1 dwmblocks") }, 
-    { 0,                            XF86XK_MonBrightnessUp,    spawn,   SHCMD("/home/riza/.environment/scripts/brghp") },
-    { 0,                            XF86XK_MonBrightnessDown,  spawn,   SHCMD("/home/riza/.environment/scripts/brghm") },
+    { 0,                            XF86XK_MonBrightnessUp,    spawn,   SHCMD("brghp") },
+                                                                            // copy /home/riza/.environment/scripts/brghp to /bin/bash
+    { 0,                            XF86XK_MonBrightnessDown,  spawn,   SHCMD("brghm") },
+                                                                            // copy /home/riza/.environment/scripts/brghm to /bin/bash
     { 0,                            XF86XK_MonBrightnessUp,    spawn,   SHCMD("pkill -RTMIN+2 dwmblocks") },
     { 0,                            XF86XK_MonBrightnessDown,  spawn,   SHCMD("pkill -RTMIN+2 dwmblocks") },
 
 	{ MODKEY,                       XK_space,                  spawn,   SHCMD("pkill -RTMIN+10 dwmblocks") },
 	{ 0,                            0x1008ffa9,                spawn,   SHCMD("pkill -RTMIN+11 dwmblocks") },
-	{ 0,                            0x1008ffa9,                spawn,   SHCMD("~/.environment/dwm/scripts/touchpad_toggle.sh") },
+	{ 0,                            0x1008ffa9,                spawn,   SHCMD("touchpad_toggle") },
+                                                                            // copy ~/.environment/dwm/scripts/touchpad_toggle to /bin/bash
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
